@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+      "baseUrl": ".",
+      "paths": {
+        "@/": ["./src/"],       // Simplifies imports for your source directory
+        "@shadcn/": ["./node_modules/@shadcn/"] // Maps ShadCN components
+      },
+      "jsx": "react-jsx",          // Use React's JSX runtime
+      "moduleResolution": "node",  // Node-style module resolution
+      "allowSyntheticDefaultImports": true,
+      "esModuleInterop": true,
+      "strict": true,              // Enables strict type checking
+      "skipLibCheck": true         // Skips type checking for declaration files
+    },
+    "include": ["src"],            // Includes your source directory
+    "exclude": ["node_modules"]    // Excludes dependencies from the project scope
+  }
