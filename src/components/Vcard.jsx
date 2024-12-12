@@ -87,14 +87,14 @@ END:VCARD
         </div>
        <div className="mt-6 flex justify-center md:px-8 px-2 items-center flex-wrap md:gap-6 gap-2 text-center">
   <a
-    href="tel:+1234567890" // Replace with your office phone number
+    href="tel:+919061432814" // Replace with your office phone number
     className="w-fit h-fit bg-white/40 p-1 px-2 bg-opacity-25 rounded-full flex justify-center items-center gap-1"
   >
     <FaPhoneAlt className="text-green-400 text-xl" />
     <p className="text-xs mt-1 h-fit">Office</p>
   </a>
   <a
-    href="https://yourwebsite.com" // Replace with your website URL
+    href="https://tltechnologies.net" // Replace with your website URL
     target="_blank"
     rel="noopener noreferrer"
     className="w-fit h-fit bg-white/40 p-1 px-2 bg-opacity-25 rounded-full flex justify-center items-center gap-1"
@@ -103,14 +103,14 @@ END:VCARD
     <p className="text-xs mt-1 h-fit">Website</p>
   </a>
   <a
-    href="mailto:example@example.com" // Replace with your email address
+    href="mailto:sangig@tltechnologies.net" // Replace with your email address
     className="w-fit h-fit bg-white/40 p-1 px-2 bg-opacity-25 rounded-full flex justify-center items-center gap-1"
   >
     <MdEmail className="text-green-400 text-xl" />
     <p className="text-xs mt-1 h-fit">Email</p>
   </a>
   <a
-    href="https://www.google.com/maps?q=your+location" // Replace with your location URL
+    href="https://www.google.com/maps?rlz=1C1ONGR_enIN1100IN1100&um=1&ie=UTF-8&fb=1&gl=in&sa=X&geocode=KcF_oz-xvwU7MW8khC7TS534&daddr=Vilame+1st+Floor,+Laham+Commercial+Complex,+Near+Asset+Orchestra+,+Vetturoad+Traffic+Point,+Pallinada,+Kazhakkoottam,+Kerala+695582" // Replace with your location URL
     target="_blank"
     rel="noopener noreferrer"
     className="w-fit h-fit bg-white/40 p-1 px-2 bg-opacity-25 rounded-full flex justify-center items-center gap-1"
@@ -119,7 +119,7 @@ END:VCARD
     <p className="text-xs mt-1 h-fit">Location</p>
   </a>
   <a
-    href="https://wa.me/1234567890" // Replace with your WhatsApp number
+    href="https://wa.me/+919061432814" // Replace with your WhatsApp number
     target="_blank"
     rel="noopener noreferrer"
     className="w-fit h-fit bg-white/40 p-1 px-2 bg-opacity-25 rounded-full flex justify-center items-center gap-1"
