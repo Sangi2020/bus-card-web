@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { FaPhone, FaGlobe, FaShareAlt, FaWhatsapp } from "react-icons/fa";
+
+import { FaPhoneAlt } from "react-icons/fa";
+
 import { MdEmail } from "react-icons/md";
 import { BiSolidContact } from "react-icons/bi";
 import { FaLocationDot } from "react-icons/fa6";
@@ -87,7 +90,7 @@ END:VCARD
     href="tel:+1234567890" // Replace with your office phone number
     className="w-fit h-fit bg-white/40 p-1 px-2 bg-opacity-25 rounded-full flex justify-center items-center gap-1"
   >
-    <FaPhone className="text-green-400 text-xl" />
+    <FaPhoneAlt className="text-green-400 text-xl" />
     <p className="text-xs mt-1 h-fit">Office</p>
   </a>
   <a
