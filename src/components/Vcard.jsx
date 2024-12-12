@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaPhone, FaGlobe, FaShareAlt } from "react-icons/fa";
+import { FaPhone, FaGlobe, FaShareAlt, FaWhatsapp } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { BiSolidContact } from "react-icons/bi";
 import { FaLocationDot } from "react-icons/fa6";
@@ -12,7 +12,7 @@ const BusinessCard = () => {
   return (
     <>
       {/* Business Card */}
-      <div className="md:w-[100%]  w-full relative sm:w-[400px] max-w-[400px] z-40 bg-black text-white rounded-3xl shadow-lg overflow-hidden md:py-6  p-4  flex flex-col items-center justify-center">
+      <div className="md:w-[100%]  font-sans w-full relative sm:w-[400px] max-w-[400px] z-40 bg-black text-white rounded-3xl shadow-lg overflow-hidden md:py-6  p-4  flex flex-col items-center justify-center">
         {/* Header */}
         <div className="absolute top-6 right-6 flex gap-6 ">
           <FaShareAlt className="text-green-400 mx-auto text-xl" />
@@ -27,9 +27,9 @@ const BusinessCard = () => {
             alt="Profile"
             className="w-24 h-24 z-[15000] mx-auto rounded-full border-4 object-cover object-center "
           />
-          <h1 className="text-2xl font-semibold mt-4">Jeff Baer</h1>
+          <h1 className="text-2xl font-bold mt-4">Sangeetha </h1>
           <p className="text-sm text-gray-400">CEO/Owner</p>
-          <p className="text-sm mt-1">BizViz | Smart vCard | Reviews Zip | VCF Generator</p>
+          <p className="text-sm mt-1">TL Technologies | IT and digital solutions</p>
           <p className="text-xs mt-1">2502 N Clark St, #240, Chicago, IL 60614 USA</p>
         </div>
 
@@ -65,25 +65,25 @@ END:VCARD
           </button>
         </div>
         <div className="mt-6 flex justify-center  md:px-8 px-2 items-center flex-wrap md:gap-6 gap-2 text-center ">
-  <div className="w-16 h-16 bg-stone-50 bg-opacity-25 rounded-full flex flex-col justify-center items-center">
+  <div className="w-fit  h-fit bg-white/40 p-1 px-2 bg-opacity-25  rounded-full flex  justify-center items-center gap-1 px-2">
     <FaPhone className="text-green-400 text-xl" />
     <p className="text-xs mt-1">Office</p>
   </div>
-  <div className="w-16 h-16 bg-stone-50  bg-opacity-25 rounded-full flex flex-col justify-center items-center">
+  <div className="w-fit  h-fit bg-white/40 p-1 px-2  bg-opacity-25 rounded-full flex  justify-center items-center gap-1 px-2">
     <FaGlobe className="text-green-400 text-xl" />
     <p className="text-xs mt-1">Website</p>
   </div>
-  <div className="w-16 h-16 bg-stone-50 bg-opacity-25 rounded-full flex flex-col justify-center items-center">
+  <div className="w-fit  h-fit bg-white/40 p-1 px-2 bg-opacity-25 rounded-full flex  justify-center items-center gap-1 px-2">
     <MdEmail className="text-green-400 text-xl" />
     <p className="text-xs mt-1">Email</p>
   </div>
-  <div className="w-16 h-16 bg-stone-50 bg-opacity-25 rounded-full flex flex-col justify-center items-center">
+  <div className="w-fit  h-fit bg-white/40 p-1 px-2 bg-opacity-25 rounded-full flex  justify-center items-center gap-1 px-2">
     <FaLocationDot className="text-green-400 text-xl" />
     <p className="text-xs mt-1">Location</p>
   </div>
-  <div className="w-16 h-16 bg-stone-50 bg-opacity-25 rounded-full flex flex-col justify-center items-center">
-    <BiSolidContact className="text-green-400 text-xl" />
-    <p className="text-xs mt-1">Calendar</p>
+  <div className="w-fit  h-fit bg-white/40 p-1 px-2 bg-opacity-25 rounded-full flex  justify-center items-center gap-1">
+    <FaWhatsapp className="text-green-400 text-xl" />
+    <p className="text-xs mt-1">Whatsapp</p>
   </div>
 </div>
 
