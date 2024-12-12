@@ -8,24 +8,42 @@ import qr from '../assets/qr.png';
 
 const BusinessCard = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-
+  const handleShare = async () => {
+    try {
+      if (navigator.share) {
+        await navigator.share({
+          title: "Business Card",
+          text: "Check out this business card!",
+          url: "https://bus-card-web-wynn.vercel.app/",
+        });
+        console.log("Content shared successfully!");
+      } else {
+        alert("Sharing is not supported on this browser.");
+      }
+    } catch (error) {
+      console.error("Error sharing content:", error);
+    }
+  };
   return (
     <>
       {/* Business Card */}
       <div className="md:w-[100%]  font-sans w-full relative sm:w-[400px] max-w-[400px] z-40 bg-black text-white rounded-3xl shadow-lg overflow-hidden md:py-6  p-4  flex flex-col items-center justify-center">
         {/* Header */}
         <div className="absolute top-6 right-6 flex gap-6 ">
-          <FaShareAlt className="text-green-400 mx-auto text-xl" />
-          <LuQrCode
+        <FaShareAlt
+        className="text-green-400 mx-auto text-xl cursor-pointer"
+        onClick={handleShare}
+      />
+                <LuQrCode
             className="text-stone-200 mx-auto text-xl cursor-pointer"
             onClick={() => setIsModalOpen(true)}
           />
         </div>
         <div className="text-center w-full px-6">
           <img
-            src="https://img.freepik.com/free-photo/man-white-shirt-looks-confused-lost_144627-47949.jpg?ga=GA1.1.1158695550.1733941826&semt=ais_hybrid"
+            src="https://www.tltechnologies.net/img/demos/business-consulting-3/backgrounds/Sangi-3.png"
             alt="Profile"
-            className="w-24 h-24 z-[15000] mx-auto rounded-full border-4 object-cover object-center "
+            className="w-24 h-24 z-[15000] mx-auto rounded-full border-4 object-cover object-top "
           />
           <h1 className="text-2xl font-bold mt-4">Sangeetha </h1>
           <p className="text-sm text-gray-400">CEO/Owner</p>
@@ -64,29 +82,49 @@ END:VCARD
             Save Contact
           </button>
         </div>
-        <div className="mt-6 flex justify-center  md:px-8 px-2 items-center flex-wrap md:gap-6 gap-2 text-center ">
-  <div className="w-fit  h-fit bg-white/40 p-1 px-2 bg-opacity-25  rounded-full flex  justify-center items-center gap-1 px-2">
+       <div className="mt-6 flex justify-center md:px-8 px-2 items-center flex-wrap md:gap-6 gap-2 text-center">
+  <a
+    href="tel:+1234567890" // Replace with your office phone number
+    className="w-fit h-fit bg-white/40 p-1 px-2 bg-opacity-25 rounded-full flex justify-center items-center gap-1"
+  >
     <FaPhone className="text-green-400 text-xl" />
-    <p className="text-xs mt-1">Office</p>
-  </div>
-  <div className="w-fit  h-fit bg-white/40 p-1 px-2  bg-opacity-25 rounded-full flex  justify-center items-center gap-1 px-2">
+    <p className="text-xs mt-1 h-fit">Office</p>
+  </a>
+  <a
+    href="https://yourwebsite.com" // Replace with your website URL
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-fit h-fit bg-white/40 p-1 px-2 bg-opacity-25 rounded-full flex justify-center items-center gap-1"
+  >
     <FaGlobe className="text-green-400 text-xl" />
-    <p className="text-xs mt-1">Website</p>
-  </div>
-  <div className="w-fit  h-fit bg-white/40 p-1 px-2 bg-opacity-25 rounded-full flex  justify-center items-center gap-1 px-2">
+    <p className="text-xs mt-1 h-fit">Website</p>
+  </a>
+  <a
+    href="mailto:example@example.com" // Replace with your email address
+    className="w-fit h-fit bg-white/40 p-1 px-2 bg-opacity-25 rounded-full flex justify-center items-center gap-1"
+  >
     <MdEmail className="text-green-400 text-xl" />
-    <p className="text-xs mt-1">Email</p>
-  </div>
-  <div className="w-fit  h-fit bg-white/40 p-1 px-2 bg-opacity-25 rounded-full flex  justify-center items-center gap-1 px-2">
+    <p className="text-xs mt-1 h-fit">Email</p>
+  </a>
+  <a
+    href="https://www.google.com/maps?q=your+location" // Replace with your location URL
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-fit h-fit bg-white/40 p-1 px-2 bg-opacity-25 rounded-full flex justify-center items-center gap-1"
+  >
     <FaLocationDot className="text-green-400 text-xl" />
-    <p className="text-xs mt-1">Location</p>
-  </div>
-  <div className="w-fit  h-fit bg-white/40 p-1 px-2 bg-opacity-25 rounded-full flex  justify-center items-center gap-1">
+    <p className="text-xs mt-1 h-fit">Location</p>
+  </a>
+  <a
+    href="https://wa.me/1234567890" // Replace with your WhatsApp number
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-fit h-fit bg-white/40 p-1 px-2 bg-opacity-25 rounded-full flex justify-center items-center gap-1"
+  >
     <FaWhatsapp className="text-green-400 text-xl" />
-    <p className="text-xs mt-1">Whatsapp</p>
-  </div>
+    <p className="text-xs mt-1 h-fit">Whatsapp</p>
+  </a>
 </div>
-
 
 
 
