@@ -27,6 +27,34 @@ const BusinessCard = () => {
       console.error("Error sharing content:", error);
     }
   };
+
+  const SaveContactButton = () => {
+    const handleSaveContact = () => {
+      const vCardData = `
+  BEGIN:VCARD
+  VERSION:3.0
+  N:Gopalakrishnan;Sangeetha;;;
+  FN:Sangeetha C Gopalakrishnan
+  ORG:TL Technologies
+  TITLE:CEO/Owner
+  TEL;TYPE=WORK,VOICE:+919061432814
+  EMAIL;TYPE=WORK:sangig@tltechnologies.net
+  URL:https://bus-card-web-wynn.vercel.app/
+  ADR:;;Thiruvananthapuram, India; Coming Soon in Kochi
+  END:VCARD
+      `;
+  
+      const blob = new Blob([vCardData], { type: "text/vcard" });
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = "Sangeetha-Gopalakrishnan.vcf";
+  
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    };
+
+
   return (
     <>
       {/* Business Card */}
@@ -51,39 +79,18 @@ const BusinessCard = () => {
           <h1 className="text-2xl font-bold mt-4">Sangeetha </h1>
           <p className="text-sm text-gray-400">CEO/Owner</p>
           <p className="text-sm mt-1">TL Technologies | IT and digital solutions</p>
-          <p className="text-xs mt-1">2502 N Clark St, #240, Chicago, IL 60614 USA</p>
+          <p className="text-xs mt-1">Thiruvananthapuram, India | Coming Soon in Kochi</p>
         </div>
 
         {/* Save Contact Button */}
         <div className="mt-6 w-full px-2 ">
-          <button
-            className="w-full bg-green-500 hover:bg-white text-white hover:text-black transition-all font-medium py-2 rounded-xl flex items-center justify-center gap-2 duration-300 ease-in-out"
-            onClick={() => {
-              const vCardData = `
-BEGIN:VCARD
-VERSION:3.0
-N:Baer;Jeff;;;
-FN:Jeff Baer
-ORG:BizViz
-TITLE:CEO/Owner
-TEL;type=WORK,VOICE:+1 312-555-1234
-EMAIL;type=WORK:info@bizviz.com
-URL:https://bizviz.com
-ADR:;;2502 N Clark St, #240;Chicago;IL;60614;USA
-END:VCARD
-              `;
-              const blob = new Blob([vCardData], { type: "text/vcard" });
-              const link = document.createElement("a");
-              link.href = URL.createObjectURL(blob);
-              link.download = "Jeff-Baer.vcf";
-              document.body.appendChild(link);
-              link.click();
-              document.body.removeChild(link);
-            }}
-          >
-            <BiSolidContact className="text-xl" />
-            Save Contact
-          </button>
+        <button
+      className="w-full bg-green-500 hover:bg-white text-white hover:text-black transition-all font-medium py-2 rounded-xl flex items-center justify-center gap-2 duration-300 ease-in-out"
+      onClick={handleSaveContact}
+    >
+      <BiSolidContact className="text-xl" />
+      Save Contact
+    </button>
         </div>
        <div className="mt-6 flex justify-center md:px-8 px-2 items-center flex-wrap md:gap-6 gap-2 text-center">
   <a
