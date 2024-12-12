@@ -51,7 +51,7 @@ const BusinessCard = () => {
           <h1 className="text-2xl font-bold mt-4">Sangeetha </h1>
           <p className="text-sm text-gray-400">CEO/Owner</p>
           <p className="text-sm mt-1">TL Technologies | IT and digital solutions</p>
-          <p className="text-xs mt-1">Thiruvananthapuram, India |  coming Soon in Kochi</p>
+          <p className="text-xs mt-1">2502 N Clark St, #240, Chicago, IL 60614 USA</p>
         </div>
 
         {/* Save Contact Button */}
@@ -63,13 +63,13 @@ const BusinessCard = () => {
 BEGIN:VCARD
 VERSION:3.0
 N:Baer;Jeff;;;
-FN:Sangeetha C Gopalakrishnan
-ORG:TL Technologies
+FN:Jeff Baer
+ORG:BizViz
 TITLE:CEO/Owner
-TEL;type=WORK,VOICE:+919061432814
-EMAIL;type=WORK:sangig@tltechnologies.net
-URL:https://bus-card-web-wynn.vercel.app/
-ADR:;;Thiruvananthapuram, India   coming Soon in Kochi
+TEL;type=WORK,VOICE:+1 312-555-1234
+EMAIL;type=WORK:info@bizviz.com
+URL:https://bizviz.com
+ADR:;;2502 N Clark St, #240;Chicago;IL;60614;USA
 END:VCARD
               `;
               const blob = new Blob([vCardData], { type: "text/vcard" });
@@ -91,6 +91,7 @@ END:VCARD
     className="w-fit h-fit bg-white/40 p-1 px-2 bg-opacity-25 rounded-full flex justify-center items-center gap-1"
   >
     <FaPhoneAlt className="text-green-400 text-xl" />
+    <p className="text-xs mt-1 h-fit">Office</p>
   </a>
   <a
     href="https://tltechnologies.net" // Replace with your website URL
@@ -99,12 +100,14 @@ END:VCARD
     className="w-fit h-fit bg-white/40 p-1 px-2 bg-opacity-25 rounded-full flex justify-center items-center gap-1"
   >
     <FaGlobe className="text-green-400 text-xl" />
+    <p className="text-xs mt-1 h-fit">Website</p>
   </a>
   <a
     href="mailto:sangig@tltechnologies.net" // Replace with your email address
     className="w-fit h-fit bg-white/40 p-1 px-2 bg-opacity-25 rounded-full flex justify-center items-center gap-1"
   >
     <MdEmail className="text-green-400 text-xl" />
+    <p className="text-xs mt-1 h-fit">Email</p>
   </a>
   <a
     href="https://www.google.com/maps?rlz=1C1ONGR_enIN1100IN1100&um=1&ie=UTF-8&fb=1&gl=in&sa=X&geocode=KcF_oz-xvwU7MW8khC7TS534&daddr=Vilame+1st+Floor,+Laham+Commercial+Complex,+Near+Asset+Orchestra+,+Vetturoad+Traffic+Point,+Pallinada,+Kazhakkoottam,+Kerala+695582" // Replace with your location URL
@@ -113,6 +116,7 @@ END:VCARD
     className="w-fit h-fit bg-white/40 p-1 px-2 bg-opacity-25 rounded-full flex justify-center items-center gap-1"
   >
     <FaLocationDot className="text-green-400 text-xl" />
+    <p className="text-xs mt-1 h-fit">Location</p>
   </a>
   <a
     href="https://wa.me/+919061432814" // Replace with your WhatsApp number
@@ -121,6 +125,7 @@ END:VCARD
     className="w-fit h-fit bg-white/40 p-1 px-2 bg-opacity-25 rounded-full flex justify-center items-center gap-1"
   >
     <FaWhatsapp className="text-green-400 text-xl" />
+    <p className="text-xs mt-1 h-fit">Whatsapp</p>
   </a>
 </div>
 
