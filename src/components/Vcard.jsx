@@ -51,7 +51,7 @@ const BusinessCard = () => {
           <h1 className="text-2xl font-bold mt-4">Sangeetha </h1>
           <p className="text-sm text-gray-400">CEO/Owner</p>
           <p className="text-sm mt-1">TL Technologies | IT and digital solutions</p>
-          <p className="text-xs mt-1">2502 N Clark St, #240, Chicago, IL 60614 USA</p>
+          <p className="text-xs mt-1">Thiruvananthapuram, India |  coming Soon in Kochi</p>
         </div>
 
         {/* Save Contact Button */}
